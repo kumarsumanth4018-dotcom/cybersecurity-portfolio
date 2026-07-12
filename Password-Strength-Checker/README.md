@@ -33,3 +33,58 @@ Most password strength checkers only look at length and character variety. This 
 6. A final strength rating and tailored suggestions are printed
 
 ## 📂 Project Structure
+Password-Strength-Checker/
+├── password_checker.py
+└── README.md
+
+## ▶️ Usage
+
+```bash
+python password_checker.py
+```
+
+Example output:
+
+```
+Enter your password: Summer123!
+
+Password Analysis
+-----------------------
+Score: 90 /100
+Strength: Very Strong
+Entropy: 72.34 bits
+
+Excellent password!
+```
+
+## 🎯 Scoring Breakdown
+
+| Check                        | Points |
+|-------------------------------|--------|
+| Length ≥ 8 characters          | 20     |
+| Contains uppercase letter      | 15     |
+| Contains lowercase letter      | 15     |
+| Contains digit                 | 15     |
+| Contains special character     | 15     |
+| No repeated characters         | 10     |
+| No sequential patterns         | 10     |
+
+*Note: Passwords found in the breach list are automatically rated "Very Weak" regardless of score.*
+
+## 🎯 Learning Outcomes
+
+This project strengthened my understanding of:
+- Regex-based pattern validation
+- Entropy and information theory as applied to password security
+- Practical credential security best practices
+- Building rule-based scoring/decision systems in Python
+
+## 🔮 Future Improvements
+
+- Load a larger, external breach-password dataset (e.g. Have I Been Pwned API)
+- Add a GUI or web interface
+- Support batch password auditing from a file
+
+## 📄 License
+
+This project is open-source and available for educational use.
